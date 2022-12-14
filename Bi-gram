@@ -1,0 +1,23 @@
+#create list and dict
+spilt_numbers=[ ]
+result={}
+#check input length less than 10
+while True:
+    numbers=input("Please insert number(2-10 digi): ")
+    if len(numbers)>1 and len(numbers)<=10:
+        for num in range(len(numbers)-1):
+            spilt_numbers.append(int(numbers[num]+numbers[num+1])) #spilt number from input and convert to integer
+        break
+    else:
+        print("please try again  length of number choose 2-10 digi ")
+print(f"Input:{numbers}")
+
+#check every value in spilt_numbers
+for spilt_number in spilt_numbers:
+    if spilt_number in result:
+        result[spilt_number]+=1
+    else:
+        result[spilt_number] = 1
+
+print(f"Output:{result}")
+   
